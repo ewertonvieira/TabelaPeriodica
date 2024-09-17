@@ -30,14 +30,6 @@ body {
     overflow: hidden;
     position: relative;
   }
-  
-  .naometais {
-    background-color: #96CD30;
-  }
-
-  .metaisalcalinos {
-    background-color: #F1B200;
-  }
 
   td .content {
     overflow: hidden; 
