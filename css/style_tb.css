@@ -1,61 +1,103 @@
 body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #2b2b2b;
-  color: #ffffff;
-  font-family: 'Courier New', Courier, monospace;
-}
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #2b2b2b;
+    color: #ffffff;
+  }
+  
+  h1 {
+    text-align: center;
+    margin: 10px 0;
+    font-size: 2rem;
+  }
+  
+  table {
+    border-collapse: separate;
+    border-spacing: 5px;
+    margin: 0 auto;
+    font-family: sans-serif;
+  }
+  
+  td {
+    width: 70px;
+    height: 70px;
+    padding: 5px;
+    background-color: inherit;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    color: #ffffff;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .naometais {
+    background-color: #96CD30;
+  }
 
-h1 {
-  text-align: center;
-  margin: 20px 0;
-  font-size: 3rem;
-}
+  .metaisalcalinos {
+    background-color: #F1B200;
+  }
 
-table {
-  border-collapse: collapse;
-  margin: 0 auto;
-  font-family: none;
-}
-
-td {
-  width: 70px;
-  height: 70px;
-  padding: 2px;
-  background-color: inherit;
-  border: 1px solid #ffffff;
-  color: #ffffff;
-  text-align: center;
-}
-
-.space,
-.hidden {
-  height: 30px;
-  visibility: hidden;
-  border: none;
-}
-
-.indice {
-  text-align: left;
-  font-size: 0.7em;
-}
-
-h3,
-p {
-  margin: 0;
-  padding: 0;
-}
-
-h3 {
-  font-size: 1.4em;
-}
-
-p {
-  font-size: 0.8em;
-  color: #adadad;
-  margin-top: 10px;
-}
-
-td:hover{
-    transform: scale(2);
-}
+  td .content {
+    overflow: hidden; 
+    text-overflow: ellipsis;
+    white-space: nowrap; 
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+  }
+  
+  td:hover {
+    transform: scale(1.1);
+    background-color: #2b2b2b;
+    border: 2px solid #ffffff;
+    z-index: 1;
+  }
+  
+  td:hover::before {
+    opacity: 1;
+  }
+  
+  td::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px #ffffff;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+  }
+  
+  .space,
+  .hidden {
+    height: 10px;
+    visibility: hidden;
+    border: none;
+  }
+  
+  .indice {
+    text-align: left;
+    font-size: 0.7em;
+  }
+  
+  h3,
+  p {
+    margin: 0;
+    padding: 0;
+  }
+  
+  h3 {
+    font-size: 1.4em;
+  }
+  
+  p {
+    font-size: 0.8em;
+    color: #adadad;
+    margin-top: 10px;
+  }
+  
